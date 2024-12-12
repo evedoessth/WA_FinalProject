@@ -1,0 +1,470 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/*Calendar
+body {
+	font-family: Arial, sans-serif;
+	background-color: white;
+	margin: 0;
+}
+
+.wrapper {
+	max-width: 1100px;
+	margin: 15px auto;
+}
+
+/* Calendar container */
+.container-calendar {
+	background: #ffffff;
+	padding: 15px;
+	max-width: 900px;
+	margin: 0 auto;
+	overflow: auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Event section styling */
+#event-section {
+	padding: 10px;
+	background: #f5f5f5;
+	margin: 20px 0;
+	border: 1px solid #ccc;
+}
+
+.container-calendar #left h1 {
+	color: green;
+	text-align: center;
+	background-color: #f2f2f2;
+	margin: 0;
+	padding: 10px 0;
+}
+
+#event-section h3 {
+	color: green;
+	font-size: 18px;
+	margin: 0;
+}
+
+#event-section input[type="date"],
+#event-section input[type="text"] {
+	margin: 10px 0;
+	padding: 5px;
+	width: 80%;
+}
+
+#event-section button {
+	background: green;
+	color: white;
+	border: none;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.event-marker {
+	position: relative;
+}
+
+.event-marker::after {
+	content: '';
+	display: block;
+	width: 6px;
+	height: 6px;
+	background-color: red;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+/* event tooltip styling */
+.event-tooltip {
+	position: absolute;
+	background-color: rgba(234, 232, 232, 0.763);
+	color: black;
+	padding: 10px;
+	border-radius: 4px;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: none;
+	transition: all 0.3s;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.event-marker:hover .event-tooltip {
+	display: block;
+}
+
+/* Reminder section styling */
+#reminder-section {
+	padding: 10px;
+	background: #f5f5f5;
+	margin: 20px 0;
+	border: 1px solid #ccc;
+}
+
+#reminder-section h3 {
+	color: green;
+	font-size: 18px;
+	margin: 0;
+}
+
+#reminderList {
+	list-style: none;
+	padding: 0;
+}
+
+#reminderList li {
+	margin: 5px 0;
+	font-size: 16px;
+}
+
+/* Style for the delete buttons */
+.delete-event {
+	background: rgb(237, 19, 19);
+	color: white;
+	border: none;
+	padding: 5px 10px;
+	cursor: pointer;
+	margin-left: 10px;
+	align-items: right;
+}
+
+/* Buttons in the calendar */
+.button-container-calendar button {
+	cursor: pointer;
+	background: green;
+	color: #fff;
+	border: 1px solid green;
+	border-radius: 4px;
+	padding: 5px 10px;
+}
+
+/* Calendar table */
+.table-calendar {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.table-calendar td,
+.table-calendar th {
+	padding: 5px;
+	border: 1px solid #e2e2e2;
+	text-align: center;
+	vertical-align: top;
+}
+
+/* Date picker */
+.date-picker.selected {
+	background-color: #f2f2f2;
+	font-weight: bold;
+	outline: 1px dashed #00BCD4;
+}
+
+.date-picker.selected span {
+	border-bottom: 2px solid currentColor;
+}
+
+/* Day-specific styling */
+.date-picker:nth-child(1) {
+	color: red;
+	/* Sunday */
+}
+
+.date-picker:nth-child(6) {
+	color: green;
+	/* Friday */
+}
+
+/* Hover effect for date cells */
+.date-picker:hover {
+	background-color: green;
+	color: white;
+	cursor: pointer;
+}
+
+/* Header for month and year */
+#monthAndYear {
+	text-align: center;
+	margin-top: 0;
+}
+
+/* Navigation buttons */
+.button-container-calendar {
+	position: relative;
+	margin-bottom: 1em;
+	overflow: hidden;
+	clear: both;
+}
+
+#previous {
+	float: left;
+}
+
+#next {
+	float: right;
+}
+
+/* Footer styling */
+.footer-container-calendar {
+	margin-top: 1em;
+	border-top: 1px solid #dadada;
+	padding: 10px 0;
+}
+
+.footer-container-calendar select {
+	cursor: pointer;
+	background: #ffffff;
+	color: #585858;
+	border: 1px solid #bfc5c5;
+	border-radius: 3px;
+	padding: 5px 1em;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
