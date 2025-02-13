@@ -32,20 +32,18 @@
 
     <section>
         <h1>Login</h1> 
-        <form>
-            <label for="email">E Mail</label><br>
-            <input type="text" id="loginEmail" name="email"> <br>
+        <form action="/auth" method="post">
             <label for="username">Username</label><br>
-            <input type="text" id="loginUsername" name="username"><br>
+            <input type="text" id="loginUsername" placeholder="Username" name="username" required><br>
             <label for="password">Password</label><br>
-            <input type="text" id="loginPassword" name="password"><br>
+            <input type="text" id="loginPassword" placeholder="Password" name="password" required><br>
             <input type="submit" value="Login">
         </form>
      </section>
  
     
 
-    <script src="../js/app.js"></script>
+    <script src="../js/login.js"></script>
 
 </body>
 
