@@ -15,8 +15,8 @@
   <meta property="og:image:alt" content="">
 
   <link rel="icon" href="../favicon.ico" sizes="any">
-  <link rel="icon" href="../img/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="../img/icon.png">
+  <link rel="icon" href="../img/main_icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../img/main_icon.png">
 
   <link rel="manifest" href="../site.webmanifest">
   <meta name="theme-color" content="#9DF0FA">
@@ -24,13 +24,19 @@
 
 <body>
     <header>
-        <a href="../html/landingPage.html"><img src="../img/icon.png"></a>
+        <figure>
+            <a href="../html/landingPage.html">
+                <img src="../img/main_icon.png">
+            </a>
+        </figure>
+        
         <h2>P & P - Planner</h2>
 </header>
-    <a class="secondary-emphasis-button" href="../nodelogin/login.html">Login</a>
-    <a class="secondary-button">Register</a> 
-
-    <section>
+    <div class="button-container">
+        <a class="secondary-emphasis-button" href="../html/login.html">Login</a>
+        <a class="secondary-button">Register</a> 
+    </div>
+    <section class="form-input">
        <h1>Register</h1> 
        <form>
            <label for="email">E Mail</label><br>

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pen & Paper Planner - Campaign Creation</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../../css/style.css">
   <meta name="description" content="">
 
   <meta property="og:title" content="Pen & Paper Planner - Dashboard">
@@ -14,9 +14,9 @@
   <meta property="og:image" content="">
   <meta property="og:image:alt" content="">
 
-  <link rel="icon" href="../favicon.ico" sizes="any">
-  <link rel="icon" href="../img/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="../img/icon.png">
+  <link rel="icon" href="../../favicon.ico" sizes="any">
+  <link rel="icon" href="../../img/main_icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../img/main_icon.png">
 
   <link rel="manifest" href="../site.webmanifest">
   <meta name="theme-color" content="#9DF0FA">
@@ -24,43 +24,54 @@
 
 <body>
     <header>
-            <figure>
-                <img src="../img/icon.png">
-            </figure>
-            <div>P & P - Planner</div>
+        <figure>
+            <a href="../html/landingPage.html">
+                <img src="../../img/main_icon.png">
+            </a>
+        </figure>
+        <h2>P & P - Planner</h2>
         <nav>
-            <a href="../dashboard.html">Dashboard</a>
-            <a href="../html/campaign/campaignsDashboard.html">My Campaigns</a>
-            <a href="../html/profile.html">Profile</a>
-            <a href="../html/settings.html">Settings</a>
-            <a href="../html/landingPage.html">Logout</a>
-       
+            <a href="../../html/dashboard.html">Dashboard</a>
+            <a href="../../html/campaign/campaignsDashboard.html">My Campaigns</a>
+            <a href="../../html/profile.html">Profile</a>
+            <a href="../../html/settings.html">Settings</a>
+            <a class="underline" href="../../html/landingPage.html">Logout</a>
         </nav>
     </header>
-    <section>
-        <a href="../dashboard.html">Back to Dashboard</a>
-        <p class="small-heading">Campaign</p>
-        <h1 id="campaign-name">Eon Crusaders</h1>
+    <main>
         <section>
-            <a href="../campaign/campaignCreation.html">Edit</a>
-            <button id="campaign-delete">Delete</button>
-            <button>Notifications</button>
+            <a class="sized-button emphasis-button" href="../dashboard.html">Back to Dashboard</a>
+            <p class="small-heading">Campaign</p>
+            <h1 id="campaign-name">Eon Crusaders</h1>
+            <section class="setting-button-container">
+                <a class="medium-emphasis-button sized-button" href="../campaign/campaignCreation.html">Edit</a>
+                <button class="medium-emphasis-button sized-button" id="campaign-delete">Delete</button>
+                <button class="medium-emphasis-button sized-button">Notifications</button>
+            </section>
+            <img class="full-length" src="../../img/eon crusaders.png">
+            <h2 >Description</h2>
+            <p id="campaign-description">Lorum ipsum</p>
+            <hr>
+            <h2>Participants</h2>
+            <div id="campaign-participants"></div>
+            <button class="high-emphasis-button sized-button" id="join-campaign">Join Campaign</button>
+            <hr>
+            <h2>Sessions</h2>
+            <button class="high-emphasis-button sized-button" id="create-session">Add Session</button>
+            <ul id="campaign-sessions" style="list-style-type: none;">
+                <li class="card-list">
+                    <a href="../../html/session/sessionDetail.html">
+                        <img src="../../img/main_icon.png">
+                        <p>The Wild Forest</p>
+                    </a>
+                </li>
+            </ul>
         </section>
-        <img id="campaign-image" src="../img/icon.png">
-        <h2 >Description</h2>
-        <p id="campaign-description">Lorum ipsum</p>
-        <hr>
-        <h2>Participants</h2>
-        <div id="campaign-participants"></div>
-        <button id="join-campaign">Join Campaign</button>
-        <hr>
-        <h2>Sessions</h2>
-        <button id="create-session">Add Session</button>
-        <div id="campaign-sessions"></div>
-    </section>
-    <footer>
-        <p>2024 Pen & Paper Planner</p>
-    </footer>
+        <footer>
+            <p>2024 Pen & Paper Planner</p>
+        </footer>
+    </main>
+    
 </body>
 
 </html>

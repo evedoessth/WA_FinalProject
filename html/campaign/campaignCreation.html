@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pen & Paper Planner - Campaign Creation</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../../css/style.css">
   <meta name="description" content="">
 
   <meta property="og:title" content="Pen & Paper Planner - Dashboard">
@@ -14,9 +14,9 @@
   <meta property="og:image" content="">
   <meta property="og:image:alt" content="">
 
-  <link rel="icon" href="../favicon.ico" sizes="any">
-  <link rel="icon" href="../img/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="../img/icon.png">
+  <link rel="icon" href="../../favicon.ico" sizes="any">
+  <link rel="icon" href="../../img/main_icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../img/main_icon.png">
 
   <link rel="manifest" href="../site.webmanifest">
   <meta name="theme-color" content="#9DF0FA">
@@ -24,37 +24,40 @@
 
 <body>
     <header>
-            <figure>
-                <img src="../img/icon.png">
-            </figure>
-            <div>P & P - Planner</div>
+        <figure>
+            <a href="../html/landingPage.html">
+                <img src="../../img/main_icon.png">
+            </a>
+        </figure>
+            <h2>P & P - Planner</h2>
         <nav>
-            <a href="../html/dashboard.html">Dashboard</a>
-            <a href="../html/campaign/campaignsDashboard.html">My Campaigns</a>
-            <a href="../html/profile.html">Profile</a>
-            <a href="../html/settings.html">Settings</a>
-            <a href="../html/landingPage.html">Logout</a>
-       
+            <a href="../../html/dashboard.html">Dashboard</a>
+            <a href="../../html/campaign/campaignsDashboard.html">My Campaigns</a>
+            <a href="../../html/profile.html">Profile</a>
+            <a href="../../html/settings.html">Settings</a>
+            <a class="underline" href="../../html/landingPage.html">Logout</a>
         </nav>
     </header>
-    <section>
-        <a href="../dashboard.html">Back to Dashboard</a>
-        <h1>Create your session</h1>
-        <form>
-            <label for="campaign-name">Campaign name</label><br>
-            <input id="campaign-name" type="text" name="campaign-name"><br>
-            <label for="campaign-image">Campaign image</label><br>
-            <input id="campaign-image" type="file" name="campaign-image"> <br>
-            <label for="campaign-description">Description</label> <br>
-            <input id="campaign-description" type="text" name="campaign-description"><br>
-            <br>
-            <input type="reset" value="Cancel">
-            <input type="submit" value="Submit">
-        </form>
-        
-    <footer>
-        <p>2024 Pen & Paper Planner</p>
-    </footer>
+    <main>
+        <section>
+            <a class="emphasis-button sized-button" href="../dashboard.html">Back to Dashboard</a>
+            <h1>Create your session</h1>
+            <form>
+                <label for="campaign-name">Campaign name</label><br>
+                <input id="campaign-name" type="text" name="campaign-name"><br>
+                <label for="campaign-image">Campaign image</label><br>
+                <input id="campaign-image" type="file" name="campaign-image"> <br>
+                <label for="campaign-description">Description</label> <br>
+                <input id="campaign-description" type="text" name="campaign-description"><br>
+                <br>
+                <input class="medium-emphasis-button" type="reset" value="Cancel">
+                <input class="high-emphasis-button" type="submit" value="Submit">
+            </form>
+            
+        <footer>
+            <p>2024 Pen & Paper Planner</p>
+        </footer>
+    </main>
 </body>
 
 </html>
