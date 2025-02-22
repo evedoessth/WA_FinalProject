@@ -1,0 +1,7 @@
+{
+    "campaigns" : [
+        {"id": 1, "title": "Eon Crusaders", "image": "/img/eon_crusaders.png", "sessions": [1,3,5] },
+        {"id": 2, "title": "Candlekeepers", "image": "/img/main_icon.png", "sessions": [2,4] }
+        
+    ]
+}

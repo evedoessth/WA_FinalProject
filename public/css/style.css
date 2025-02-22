@@ -168,7 +168,7 @@ main {
 	margin: 8px;
 }
 
-section > h2, section > h1 {
+section > h2, section > h1, section > h3 {
   color: #006971;
 }
 
@@ -184,6 +184,24 @@ section > h2, section > h1 {
 
   & > form > .medium-emphasis-button {
     background-color: transparent;
+  }
+}
+
+.participant-container {
+  display: flex;
+  padding: 5px;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.participant {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+
+  & > img {
+    border-radius: 500px;
   }
 }
 /*----------------Buttons--------------*/
@@ -218,6 +236,10 @@ button,
   border: 1px solid #006971;
   color: #006971;
   background-color: #ffffff;
+  &:disabled {
+    color: #7D7D7D;
+    border: 1px solid #7D7D7D;
+  }
 }
 
 .secondary-button {
@@ -349,6 +371,11 @@ header > figure > a >  img {
 .big-image {
   max-width: 550px;
   max-height: 550px;
+}
+
+.small-image {
+  max-width: 100px;
+  max-height: 100px;
 }
 
 header > figure > a {

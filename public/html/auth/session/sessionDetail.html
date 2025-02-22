@@ -22,7 +22,7 @@
   <meta name="theme-color" content="#9DF0FA">
 </head>
 
-<body>
+<body onload="fillDetails();">
     <header>
         <figure>
             <a href="/landingPage.html">
@@ -44,19 +44,24 @@
             <p class="small-heading">Session</p>
             <h1 id="session-name">Eon Legacy</h1>
             <section class="setting-button-container">
-                <a  class="medium-emphasis-button sized-button" href="/html/auth/session/sessionCreation.html">Edit</a>
-                <button  class="medium-emphasis-button sized-button" id="campaign-delete">Delete</button>
+                <button disabled class="medium-emphasis-button sized-button" href="/html/auth/session/sessionCreation.html">Edit</button>
+                <button disabled class="medium-emphasis-button sized-button" id="campaign-delete">Delete</button>
                 <button  class="medium-emphasis-button sized-button">Notifications</button>
             </section>
-            <img class="full-length" src="/img/main_icon.png">
-            <h2 >Description</h2>
+            <img id="session-image" class="full-length" src="/img/main_icon.png">
+            <h2>Description</h2>
             <p id="session-description">Lorum ipsum</p>
+            <h3>Meeting place</h3>
+            <p id="session-meetingplace"></p>
             <hr>
             <h2>Participants</h2>
-            <div id="session-participants"></div>
-            <button class="high-emphasis-button sized-button" id="join-session">Join Campaign</button>
+            <div id="session-participants" class="participant-container">
+                
+            </div>
+            <button onclick="addParticipant()" class="high-emphasis-button sized-button" id="join-session">Join Campaign</button>
             <hr>
             <h2>Date</h2>
+            <p id="session-date"></p>
             <button class="high-emphasis-button sized-button" id="input-availability">Add Availability</button>
         </section>
         <footer>
@@ -64,6 +69,7 @@
         </footer>
     </main>
     <script src="/js/app.js"></script>
+    <script src="/js/sessionDetail.js"></script>
 </body>
 
 </html>

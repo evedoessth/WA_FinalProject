@@ -25,7 +25,6 @@
       .then(data => {
         console.log(data);
       });
-      
     event.preventDefault();
   }
 
